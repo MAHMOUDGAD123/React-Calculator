@@ -1,0 +1,97 @@
+#root {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  margin-block-end: 10px;
+  display: flex;
+}
+
+.logo {
+  width: 6rem;
+  padding: 10px;
+  will-change: filter;
+  transition: filter 300ms;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  &.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+}
+
+.title {
+  padding: 20px;
+  margin-block-end: 30px;
+  background-image: linear-gradient(90deg, #9467fe, #00d8ff);
+  border-radius: 100px;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: monospace;
+  color: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: bolder;
+  background-image: linear-gradient(90deg, #9467fe, #00d8ff);
+  background-clip: text;
+  color: transparent;
+  max-width: 500px;
+}
+
+.info {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 1.05rem;
+  max-width: 500px;
+  align-items: center;
+  gap: 10px;
+  background-image: linear-gradient(90deg, #9467fe, #00d8ff);
+  background-clip: text;
+  color: transparent;
+
+  & > svg {
+    margin-right: 10px;
+    color: #00d8ff;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 5rem;
+  }
+
+  .title {
+    padding: 15px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
