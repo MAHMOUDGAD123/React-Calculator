@@ -15,7 +15,8 @@ const App: () => JSX.Element = () => {
       </div>
       <Title name="React Calc" />
       <p className="description">
-        This calculator was powered by the <span>useReducer()</span> react hook.
+        This calculator is powered by the awesome <span>useReducer()</span>{" "}
+        react hook.
       </p>
       <div className="info">
         <FontAwesomeIcon icon={faCircleInfo} />
