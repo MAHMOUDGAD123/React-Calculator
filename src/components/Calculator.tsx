@@ -75,72 +75,142 @@ const keys = [
     action: ACTION.BS,
     cls: "op",
     id: "bs",
+    title: "'Backspace' key",
   },
   {
     icon: "faAngleUp",
     action: ACTION.POW,
     cls: "op",
     id: "pow",
+    title: "'Number6 ^' key",
   },
   {
     icon: "faPercent",
     action: ACTION.MOD,
     cls: "op",
     id: "mod",
+    title: "'Number5 %' key",
   },
   {
     icon: "faXmark",
     action: ACTION.MUL,
     cls: "op",
     id: "mul",
+    title: "'Numpad *' key",
   },
-  { icon: "fa7", action: ACTION.IN7, cls: "in", id: "_7" },
-  { icon: "fa8", action: ACTION.IN8, cls: "in", id: "_8" },
-  { icon: "fa9", action: ACTION.IN9, cls: "in", id: "_9" },
+  {
+    icon: "fa7",
+    action: ACTION.IN7,
+    cls: "in",
+    id: "_7",
+    title: "'Numpad 7' key",
+  },
+  {
+    icon: "fa8",
+    action: ACTION.IN8,
+    cls: "in",
+    id: "_8",
+    title: "'Numpad 8' key",
+  },
+  {
+    icon: "fa9",
+    action: ACTION.IN9,
+    cls: "in",
+    id: "_9",
+    title: "'Numpad 9' key",
+  },
   {
     icon: "faDivide",
     action: ACTION.DIV,
     cls: "op",
     id: "div",
+    title: "'Numpad /' key",
   },
-  { icon: "fa4", action: ACTION.IN4, cls: "in", id: "_4" },
-  { icon: "fa5", action: ACTION.IN5, cls: "in", id: "_5" },
-  { icon: "fa6", action: ACTION.IN6, cls: "in", id: "_6" },
+  {
+    icon: "fa4",
+    action: ACTION.IN4,
+    cls: "in",
+    id: "_4",
+    title: "'Numpad 4' key",
+  },
+  {
+    icon: "fa5",
+    action: ACTION.IN5,
+    cls: "in",
+    id: "_5",
+    title: "'Numpad 5' key",
+  },
+  {
+    icon: "fa6",
+    action: ACTION.IN6,
+    cls: "in",
+    id: "_6",
+    title: "'Numpad 6' key",
+  },
   {
     icon: "faMinus",
     action: ACTION.SUB,
     cls: "op",
     id: "sub",
+    title: "'Numpad -' key",
   },
-  { icon: "fa1", action: ACTION.IN1, cls: "in", id: "_1" },
-  { icon: "fa2", action: ACTION.IN2, cls: "in", id: "_2" },
-  { icon: "fa3", action: ACTION.IN3, cls: "in", id: "_3" },
+  {
+    icon: "fa1",
+    action: ACTION.IN1,
+    cls: "in",
+    id: "_1",
+    title: "'Numpad 1' key",
+  },
+  {
+    icon: "fa2",
+    action: ACTION.IN2,
+    cls: "in",
+    id: "_2",
+    title: "'Numpad 2' key",
+  },
+  {
+    icon: "fa3",
+    action: ACTION.IN3,
+    cls: "in",
+    id: "_3",
+    title: "'Numpad 3' key",
+  },
   {
     icon: "faPlus",
     action: ACTION.ADD,
     cls: "op",
     id: "add",
+    title: "'Numpad +' key",
   },
   {
     icon: "faC",
     action: ACTION.CLR,
     cls: "clear",
     id: "clr",
+    title: "'C' key",
   },
-  { icon: "fa0", action: ACTION.IN0, cls: "in", id: "_0" },
+  {
+    icon: "fa0",
+    action: ACTION.IN0,
+    cls: "in",
+    id: "_0",
+    title: "'Numpad 0' key",
+  },
   {
     icon: "faCircle",
     action: ACTION.IN_,
     cls: "in dot",
     id: "dot",
+    title: "'Numpad .' key",
   },
   {
     icon: "faEquals",
     action: ACTION.CALC,
     cls: "calc",
     id: "calc",
+    title: "'Numpad Enter' key",
   },
-];
+] satisfies TYPES.KeyInfo[];
 
 const inputHandler = (state: TYPES.StateType, value: string) => {
   const previusResult = state.result;
@@ -327,8 +397,9 @@ const Calculator = () => {
   const Keys = useMemo(() => {
     return (
       <div className="keys">
-        {keys.map(({ icon, action, cls, id }, i) => (
+        {keys.map(({ icon, action, title, cls, id }, i) => (
           <Key
+            title={title}
             key={i}
             action={action}
             cls={cls}

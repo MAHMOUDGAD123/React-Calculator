@@ -9,12 +9,11 @@ declare namespace TYPES {
     mode: Mode;
   }
 
-  interface KeyProps {
-    // children: JSX.Element;
-    action: ACTION;
-    cls: string;
+  interface KeyInfo {
     icon: string;
+    action: number;
+    cls: string;
     id: string;
-    dispatchFn: React.Dispatch<ACTION>;
+    title: string;
   }
 }

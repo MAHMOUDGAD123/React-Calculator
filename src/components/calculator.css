@@ -137,3 +137,9 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {
+  .calculator {
+    color: #ffffff;
+  }
+}
